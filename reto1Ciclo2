@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class RetoSemana1 {
+    
+    public static String groot(int capas){
+        String mensaje;
+        if(capas%2 == 0){
+            mensaje = "I am that I groot it";
+            for(int i = 2; i < capas; i+= 2){
+                mensaje = "I am that I groot that " + mensaje;
+            }
+        } else {
+            mensaje = "I am it";
+            for(int i = 1; i < capas; i+= 2){
+                mensaje = "I am that I groot that " + mensaje;
+            }
+        }
+        return mensaje;
+    }
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese la N capa de los sentimientos de Groot: ");
+        int N = sc.nextInt();
+        System.out.println(groot(N));
+    }
+}
